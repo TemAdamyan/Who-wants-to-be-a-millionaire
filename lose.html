@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ով Է Ուզում Դառնալ Միլիոնատեր</title>
+
+    <script src="https://kit.fontawesome.com/cd2c07f92b.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body bgcolor="#000B46">
+    <div class="end">
+        <div class="loader"></div>
+        <img class="logo-end" src="images/logo1.png" alt="Լոգոն">
+    </div>
+    <br>
+    <p style= "text-align: center; font-size: 400%; color: #fff; margin-top:39vw;">Դուք պարտվեցիք</p>
+    <script>
+        function goToCredits(){
+            window.location.assign("./credits.html")
+        }
+        const lostAudio = new Audio("audio/loseLast.mp3")
+        lostAudio.play()
+        setTimeout(goToCredits, 4000);
+    </script>
+</body>
+</html>

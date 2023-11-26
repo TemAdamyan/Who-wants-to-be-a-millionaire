@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    @font-face {
+      font-family: "Bainsley";
+      src: url("Bainsley.woff") format("woff");
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+    #newGame{
+      position: fixed;
+      top: 10px;
+      right:10px;
+      width: 150px;
+      height: 70px;
+      font-size: 20px;
+      opacity: 0.5;
+      background-color: #fff;
+      border: none;
+    }
+    #newGame:hover{
+      cursor: pointer;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+
+      height: 100%;
+      background: #000622;
+      background: linear-gradient(90deg, #000622 0%, #001465 100%);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      font-family: "Bainsley", Arial, sans-serif;
+    }
+
+    .credits {
+      margin-top: 5vw;
+      color: #fff;
+      font-size: 24px;
+      text-align: center;
+      overflow: hidden;
+      padding: 20px;
+      animation: scroll 60s linear infinite;
+      overflow: hidden;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+
+    .member:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    #title {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+
+    }
+
+    .adminPart {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 2%;
+      margin-bottom: 20px;
+    }
+
+    .adminPart hr {
+      width: 150%;
+      border-top: 1px solid #fff;
+      margin: 10px 0;
+    }
+
+    .name-div {
+      display: flex;
+      align-items: center;
+      padding: 5px 10px 5px 10px;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.164);
+    }
+
+    .name-div img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+
+    .adminPart .admin-text {
+      font-size: 18px;
+    }
+
+    .groupPart {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .member {
+      display: flex;
+      align-items: center;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    .member:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .member-image {
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+      margin-right: 10px;
+    }
+
+    .title {
+      font-size: 56px !important;
+    }
+
+    .videoTitle {
+      font-size: 56px !important;
+      color: #fff;
+      margin-bottom: 35px;
+      text-align: center;
+    }
+
+    .videoContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    video {
+      width: 60vw;
+      height: auto;
+      max-width: 100%;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+    <script type="text/javascript">
+        function newGame(){
+            window.location.href="index.php"
+        }
+    </script>
+<body>
+
+  <div class="credits">
+    <h1 id="title" class="title">Մեր թիմը</h1>
+  </div>
+
+  <script>
+    const audio = new Audio("audio/team.mp3")
+    audio.play()
+
+    let phpGroup = [
+      { name: "Անահիտ Կալաչյան", image: "images/php1.jpg" },
+      { name: "Անդրանիկ Ադյան", image: "images/php1.jpg" },
+      { name: "Արտյոմ Ասրյան", image: "images/php1.jpg" },
+      { name: "Թեհմինե Ադամյան", image: "images/php1.jpg" },
+    ];
+    let sqlGroup = [
+      { name: "Ռուբեն Բարխուդարյան", image: "images/php1.jpg" },
+      { name: "Ալբերտ Վարդանյան", image: "images/php1.jpg" },
+      { name: "Դավիթ Թարլամազյան", image: "images/DavitTarlamazyan.jpg" },
+    ];
+
+    let jsGroup = [
+      { name: "Տիգրան Շահսուվարյան", image: "images/TigranShahsuvaryan.jpg" },
+      { name: "Սամվել Խաչատրյան", image: "images/SamXachatryan.jpg" },
+      { name: "Անդրանիկ Գևորգյան", image: "images/AndranikGevorgyan.jpg" },
+      { name: "Արարատ Հովհաննիսյան", image: "images/php1.jpg" },
+      { name: "Անահիտ Ամյան", image: "images/php1.jpg" },
+      { name: "Դավիթ Միրաքյան", image: "images/php1.jpg" },
+      { name: "Կոնստանտին Ղևոնդյան", image: "images/php1.jpg" },
+      { name: "Սամվել Աֆրիկյան", image: "images/php1.jpg" },
+      { name: "Վարդան Ավետիսյան", image: "images/php1.jpg" },
+      { name: "Յուրի Արզումանյան", image: "images/php1.jpg" },
+    ];
+
+    let htmlCssGroup = [
+      { name: "Հրանտ Մանուկյան", image: "images/php1.jpg" },
+      { name: "Դիանա Մովսեսյան", image: "images/php1.jpg" },
+      { name: "Մանե Պապյան", image: "images/php1.jpg" },
+    ];
+
+    let Ani = [{ name: "Անի Գալոյան", image: "images/php1.jpg" }];
+    let Arman = [{ name: "Արման Սարգսյան", image: "images/php1.jpg" }];
+
+    let title = [
+      "PHP team",
+      "SQL team",
+      "JS team",
+      "HTML/CSS team",
+      "Ասիստենտ-մարզիչ",
+      "Աշխատարանի ղեկավար",
+    ];
+
+    function createMember(member) {
+      let memberElement = document.createElement("div");
+      memberElement.classList.add("member");
+      memberElement.innerHTML = `
+    <img src="${member.image}" alt="${member.name}" class="member-image" />
+    <div class="member-text">${member.name}</div>
+    `;
+      return memberElement;
+    }
+
+    function createAdmin(admin, adminTitleText) {
+      let adminElement = document.createElement("div");
+      adminElement.classList.add("adminPart");
+      adminElement.innerHTML = `
+    <div class="name-div">
+      <img src="${admin.image}" alt="${admin.name}" class="member-image" />
+      <div class="admin-text">${admin.name}</div>
+    </div>
+    <hr>
+    `;
+
+      let adminTitle = document.createElement("div");
+      adminTitle.classList.add("title");
+      adminTitle.textContent = adminTitleText;
+
+      adminElement.prepend(adminTitle);
+
+      return adminElement;
+    }
+
+    function createGroup(group) {
+      let groupElement = document.createElement("div");
+      groupElement.classList.add("groupPart");
+      group.forEach(function (member) {
+        let memberElement = createMember(member);
+        groupElement.appendChild(memberElement);
+      });
+      return groupElement;
+    }
+
+    function createContainer(admin, group, adminTitleText) {
+      let container = document.createElement("div");
+      container.classList.add("container");
+
+      let adminElement = createAdmin(admin, adminTitleText);
+      let groupElement = createGroup(group);
+
+      container.appendChild(adminElement);
+      container.appendChild(groupElement);
+      return container;
+    }
+
+    function renderTeam(names, title) {
+      let credits = document.querySelector(".credits");
+
+      let titleElement = document.createElement("h1");
+      titleElement.id = "title";
+      titleElement.textContent = title;
+      credits.appendChild(titleElement);
+
+      let container = createContainer(names[0], names.slice(1));
+      credits.appendChild(container);
+    }
+
+    function clearContentOnScroll() {
+      
+      document.body.innerHTML = "";
+    }
+
+    function addVideo() {
+      audio.pause()
+      audio.currentTime = 0;
+      let container = document.createElement("div");
+      container.classList.add("videoContainer");
+      document.body.appendChild(container);
+
+      let title = document.createElement("div");
+      container.appendChild(title);
+      title.classList.add("videoTitle");
+      title.textContent = "Կսպասենք ձեզ հաջորդ անգամ․․․";
+
+      let video = document.createElement("video");
+      video.src = "images/video.mp4";
+      video.controls = true;
+      video.autoplay = true;
+      video.position = 'fixed'
+      video.right = '0';
+      video.bottom = '0';
+      container.appendChild(video);
+    }
+
+    renderTeam(Arman, title[5]);
+    renderTeam(Ani, title[4]);
+    renderTeam(htmlCssGroup, title[3]);
+    renderTeam(jsGroup, title[2]);
+    renderTeam(phpGroup, title[0]);
+    renderTeam(sqlGroup, title[1]);
+    
+    setTimeout(clearContentOnScroll, 60000);
+    setTimeout(addVideo, 61000);
+    setTimeout(newDoc, 81500)
+
+    function newDoc() {
+      window.location.assign("./index.php")
+    }
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+    document.addEventListener("DOMContentLoaded", function() {
+      const audio = new Audio("audio/team.mp3");
+      audio.play();
+    });
+
+
+  </script>
+
+
+  <button id="newGame" onclick="newGame()">
+        Սկսել Նորից
+  </button>
+
+</body>
+
+</html>
